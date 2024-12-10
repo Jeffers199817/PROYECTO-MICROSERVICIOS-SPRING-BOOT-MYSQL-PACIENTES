@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class PacienteController {
 
@@ -19,7 +21,18 @@ public class PacienteController {
 
     @PostMapping("/pacientes/crear")
     public String crearPaciente(@RequestBody Paciente paciente) {
+        pacienteService.savePaciente(paciente);
         return "Paciente creado correctamente";
     }
+
+    //2.- Obtener todos los pacientes
+
+    @GetMapping("/pacientes/traer")
+    public List<Paciente> traerPacientes() {
+
+        return pacienteService.getPacientes();
+    }
+
+
 
 }
