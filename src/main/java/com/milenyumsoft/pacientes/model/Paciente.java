@@ -19,7 +19,7 @@ import java.util.Date;
 public class Paciente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPaciente;
     private String dni;
     private String nombre;
