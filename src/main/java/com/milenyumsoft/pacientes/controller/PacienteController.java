@@ -39,6 +39,16 @@ public class PacienteController {
         return "Paciente eliminado correctamente";
     }
 
+    //4.- Editar Paciente
+    @PutMapping("/pacientes/editar/{id_original")
+    public Paciente editPaciente(@PathVariable Long id_original, @RequestBody Paciente paciente) {
+
+        pacienteService.editPaciente(id_original,paciente);
+
+        Paciente pacienteEditado = pacienteService.findPaciente(id_original);
+        return pacienteEditado;
+    }
+
 
 
 }

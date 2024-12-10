@@ -36,9 +36,9 @@ public class PacienteService implements IPacienteService {
     }
 
     @Override
-    public void editPaciente(Paciente paciente) {
+    public void editPaciente(Long id_original, Paciente paciente) {
 
-       Paciente pac =  this.findPaciente(paciente.getIdPaciente());
+       Paciente pac =  this.findPaciente(id_original);
        pac.setDni(paciente.getDni());
        pac.setNombre(paciente.getNombre());
        pac.setApellido(paciente.getApellido());

@@ -15,5 +15,5 @@ public interface IPacienteService {
 
     public Paciente findPaciente(Long id);
 
-    public void editPaciente( Paciente paciente);
+    public void editPaciente(Long id_original, Paciente paciente);
 }
