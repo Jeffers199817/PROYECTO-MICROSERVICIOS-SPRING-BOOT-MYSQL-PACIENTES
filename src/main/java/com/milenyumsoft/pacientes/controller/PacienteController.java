@@ -3,10 +3,7 @@ package com.milenyumsoft.pacientes.controller;
 import com.milenyumsoft.pacientes.model.Paciente;
 import com.milenyumsoft.pacientes.service.IPacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,6 +28,15 @@ public class PacienteController {
     public List<Paciente> traerPacientes() {
 
         return pacienteService.getPacientes();
+    }
+
+    //3.- Eliminar un paciente
+
+    @DeleteMapping("/pacientes/borrar/{id}")
+    public String deletePaciente(@PathVariable Long id) {
+
+        pacienteService.deletePaciente(id);
+        return "Paciente eliminado correctamente";
     }
 
 
