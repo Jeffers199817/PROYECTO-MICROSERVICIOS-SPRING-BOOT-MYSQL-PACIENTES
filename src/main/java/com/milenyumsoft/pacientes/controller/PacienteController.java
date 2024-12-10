@@ -49,6 +49,11 @@ public class PacienteController {
         return pacienteEditado;
     }
 
+    //5.- Obtener un paciente en particular
+    @GetMapping("/pacientes/traer/{id}")
+    public Paciente traerPaciente(@PathVariable Long id) {
+        return pacienteService.findPaciente(id);
+    }
 
 
 }
