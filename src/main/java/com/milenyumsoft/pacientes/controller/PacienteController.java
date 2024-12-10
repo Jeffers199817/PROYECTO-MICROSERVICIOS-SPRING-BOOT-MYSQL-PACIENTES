@@ -40,7 +40,7 @@ public class PacienteController {
     }
 
     //4.- Editar Paciente
-    @PutMapping("/pacientes/editar/{id_original")
+    @PutMapping("/pacientes/editar/{id_original}")
     public Paciente editPaciente(@PathVariable Long id_original, @RequestBody Paciente paciente) {
 
         pacienteService.editPaciente(id_original,paciente);
