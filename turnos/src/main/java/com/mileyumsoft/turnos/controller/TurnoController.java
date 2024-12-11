@@ -5,6 +5,7 @@ import com.mileyumsoft.turnos.service.ITurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -17,8 +18,11 @@ public class TurnoController {
     //1.- Crear un nuevo turno
 
     @PostMapping("/turno/crear")
-    public String crearTurno(@RequestBody Turno turno) {
-        turnoService.saveTurno(turno);
+    public String crearTurno(@RequestBody LocalDate fecha,
+                             @RequestBody String tratamiento,
+                             @RequestBody String nombreCompletoPaciente) {
+
+        turnoService.saveTurno(fecha, tratamiento, nombreCompletoPaciente);
         return "Turno creado correctamente";
     }
 

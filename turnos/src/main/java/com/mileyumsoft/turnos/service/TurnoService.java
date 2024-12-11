@@ -6,6 +6,7 @@ import com.mileyumsoft.turnos.repository.ITurnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -20,7 +21,12 @@ public class TurnoService implements ITurnoService {
     }
 
     @Override
-    public void saveTurno(Turno turno) {
+    public void saveTurno(LocalDate fecha, String tratamiento, String dniPaciente) {
+
+    Turno turno = new Turno();
+    turno.setFecha(fecha);
+    turno.setTratamiento(tratamiento);
+
     turnoRepository.save(turno);
     }
 
@@ -41,7 +47,7 @@ public class TurnoService implements ITurnoService {
     turnoOriginal.setTratamiento(turno.getTratamiento());
     turnoOriginal.setNombreCompletoPaciente(turno.getNombreCompletoPaciente());
 
-    this.saveTurno(turnoOriginal);
+    turnoRepository.save(turnoOriginal);
 
     }
 }
