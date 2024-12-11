@@ -8,10 +8,10 @@
 		<version>3.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.milenyumsoft</groupId>
-	<artifactId>pacientes</artifactId>
+	<groupId>com.mileyumsoft</groupId>
+	<artifactId>turnos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pacientes</name>
+	<name>turnos</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -92,3 +92,5 @@
 	</build>
 
 </project>
+
+

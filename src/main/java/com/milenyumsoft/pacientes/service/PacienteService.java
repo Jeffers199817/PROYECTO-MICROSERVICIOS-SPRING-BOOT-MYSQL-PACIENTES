@@ -44,7 +44,6 @@ public class PacienteService implements IPacienteService {
        pac.setApellido(paciente.getApellido());
        pac.setFechaNac(paciente.getFechaNac());
        pac.setTelefono(paciente.getTelefono());
-
-      pacienteRepository.save(pac);
+       this.savePaciente(pac);
     }
 }
