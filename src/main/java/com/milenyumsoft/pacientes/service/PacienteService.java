@@ -45,5 +45,6 @@ public class PacienteService implements IPacienteService {
        pac.setFechaNac(paciente.getFechaNac());
        pac.setTelefono(paciente.getTelefono());
        this.savePaciente(pac);
+        System.out.println("Paciente editado correctamente");
     }
 }
