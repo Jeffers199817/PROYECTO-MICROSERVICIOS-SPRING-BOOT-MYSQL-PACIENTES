@@ -20,4 +20,5 @@ public class Paciente {
     private String apellido;
     private Date fechaNac;
     private String telefono;
+
 }

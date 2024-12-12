@@ -56,7 +56,12 @@ public class TurnoController {
     //5.- Obtener un turno en particular
     @GetMapping("/turno/traer/{id}")
     public Turno traerPaciente(@PathVariable Long id) {
+
+        System.out.println("final 1");
         return turnoService.findTurno(id);
+
+
     }
+
 
 }
