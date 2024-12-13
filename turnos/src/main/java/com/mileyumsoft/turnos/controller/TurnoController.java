@@ -1,5 +1,6 @@
 package com.mileyumsoft.turnos.controller;
 
+import com.mileyumsoft.turnos.dto.TurnoDTO;
 import com.mileyumsoft.turnos.model.Turno;
 import com.mileyumsoft.turnos.service.ITurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +19,13 @@ public class TurnoController {
     //1.- Crear un nuevo turno
 
     @PostMapping("/turno/crear")
-    public String crearTurno(@RequestBody LocalDate fecha,
-                             @RequestBody String tratamiento,
-                             @RequestBody String nombreCompletoPaciente) {
+    public String crearTurno(@RequestBody TurnoDTO turnoDTO) {
 
-        turnoService.saveTurno(fecha, tratamiento, nombreCompletoPaciente);
+        LocalDate fecha = turnoDTO.getFecha();
+        String tratamiento = turnoDTO.getTratamiento();
+        String dniPaciente = turnoDTO.getDniPaciente();
+
+        turnoService.saveTurno(fecha, tratamiento, dniPaciente);
         return "Turno creado correctamente";
     }
 

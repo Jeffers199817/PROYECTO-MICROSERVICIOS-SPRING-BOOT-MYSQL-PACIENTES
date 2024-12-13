@@ -54,6 +54,9 @@ public class PacienteService implements IPacienteService {
     //Traer un paciente por DNI
     @Override
     public Paciente findPacienteByDni(String dni) {
+        System.out.println("llegue aqui." + dni);
+
+        System.out.println("llegue aqui.");
 
         return pacienteRepository.findPacienteByDni(dni);
     }
