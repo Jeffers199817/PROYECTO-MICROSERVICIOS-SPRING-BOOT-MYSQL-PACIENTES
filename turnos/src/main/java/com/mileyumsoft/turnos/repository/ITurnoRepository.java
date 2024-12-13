@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ITurnoRepository extends JpaRepository<Turno, Long> {
+
+
+
+
 }
