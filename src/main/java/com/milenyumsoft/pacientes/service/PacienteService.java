@@ -10,6 +10,8 @@ import java.util.List;
 @Service
 public class PacienteService implements IPacienteService {
 
+
+
     @Autowired
     private IPacienteRepository pacienteRepository;
 
@@ -45,6 +47,15 @@ public class PacienteService implements IPacienteService {
        pac.setFechaNac(paciente.getFechaNac());
        pac.setTelefono(paciente.getTelefono());
        this.savePaciente(pac);
-        System.out.println("Paciente editado correctamente");g
+        System.out.println("Paciente editado correctamente");
     }
+
+
+    //Traer un paciente por DNI
+    @Override
+    public Paciente findPacienteByDni(String dni) {
+
+        return pacienteRepository.findPacienteByDni(dni);
+    }
+
 }

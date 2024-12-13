@@ -16,4 +16,6 @@ public interface IPacienteService {
     public Paciente findPaciente(Long id);
 
     public void editPaciente(Long id_original, Paciente paciente);
+
+    public Paciente findPacienteByDni(String dni);
 }

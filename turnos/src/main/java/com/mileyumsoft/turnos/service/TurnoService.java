@@ -1,6 +1,7 @@
 package com.mileyumsoft.turnos.service;
 
 
+import com.mileyumsoft.turnos.model.Paciente;
 import com.mileyumsoft.turnos.model.Turno;
 import com.mileyumsoft.turnos.repository.ITurnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +28,18 @@ public class TurnoService implements ITurnoService {
     @Override
     public void saveTurno(LocalDate fecha, String tratamiento, String dniPaciente) {
 
+
+    //buscar el paciente en la api paciente
+     Paciente pac = apiConsumir.getForObject("http://localhost:9001/pacientes/traerdni/"+ dniPaciente, Paciente.class);
+
+    String nombreCompletoPaciente = pac.getNombre() + " " + pac.getApellido();
+
+
+
     Turno turno = new Turno();
     turno.setFecha(fecha);
     turno.setTratamiento(tratamiento);
+    turno.setNombreCompletoPaciente(nombreCompletoPaciente);
 
     turnoRepository.save(turno);
     }
