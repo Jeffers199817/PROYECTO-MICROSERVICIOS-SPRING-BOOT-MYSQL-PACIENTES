@@ -30,7 +30,7 @@ public class TurnoService implements ITurnoService {
         System.out.println("llegue aqui.");
 
     //buscar el paciente en la api paciente
-     Paciente pac = apiConsumir.getForObject("http://localhost:9001/pacientes/traer"+ dniPaciente, Paciente.class);
+     Paciente pac = apiConsumir.getForObject("http://localhost:9001/pacientes/traerdni/"+ dniPaciente, Paciente.class);
 
     String nombreCompletoPaciente = pac.getNombre() + " " + pac.getApellido();
 
