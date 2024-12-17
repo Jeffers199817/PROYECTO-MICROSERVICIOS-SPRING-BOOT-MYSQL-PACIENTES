@@ -1,4 +1,4 @@
-package com.mileyumsoft.turnos;
+package com.milenyumsoft.turnoscloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableFeignClients
 @SpringBootApplication
-public class TurnosApplication {
+public class TurnoscloudApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TurnosApplication.class, args);
+		SpringApplication.run(TurnoscloudApplication.class, args);
 	}
 
 }

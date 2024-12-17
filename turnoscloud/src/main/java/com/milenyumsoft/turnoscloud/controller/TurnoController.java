@@ -1,10 +1,9 @@
-package com.mileyumsoft.turnos.controller;
+package com.milenyumsoft.turnoscloud.controller;
 
-import com.mileyumsoft.turnos.dto.TurnoDTO;
-import com.mileyumsoft.turnos.model.Turno;
-import com.mileyumsoft.turnos.repository.IITurnoRepository;
-import com.mileyumsoft.turnos.service.IITurnoServic;
-import com.mileyumsoft.turnos.service.ITurnoService;
+import com.milenyumsoft.turnoscloud.dto.TurnoDTO;
+import com.milenyumsoft.turnoscloud.model.Turno;
+import com.milenyumsoft.turnoscloud.service.IITurnoServic;
+import com.milenyumsoft.turnoscloud.service.ITurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
